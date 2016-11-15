@@ -1,24 +1,34 @@
-# README
+# RECIPE_APP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+A recipe app for GA WDI project2
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+INTRODUCTION:  
 
-* Database initialization
+   - First Full-Stack web application using rails framework-
 
-* How to run the test suite
+   - The app consisted of 2 models
 
-* Services (job queues, cache servers, search engines, etc.)
+   - One association between models
 
-* Deployment instructions
+   - Restful routes for both models
 
-* ...
+   - Include Error Handling & Validations for both models
+
+   - User Authenthication
+
+
+
+
+
+
+TECHNOLOGIES USED:
+
+   - Ruby 2.3.1p112
+
+   - Postgresql
+
+   - Rails version 5.0.0.1
