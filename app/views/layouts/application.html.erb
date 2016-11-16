@@ -9,16 +9,24 @@
   </head>
 
   <body>
+    <h1><%= link_to "Recipe_app", root_url %></h1>
     <nav>
-      <h3><a href="/recipes"Recipes</a></h3>
+      <h3><a href="/recipes">Recipes</a></h3>
       <h3><a href="javascript:history.back()">Back</a></h3>
+      <% if @current_user %>
+        <%= link_to "Welcome, #{@current_user.username}", user_path(@current_user) %>
+        <%= link_to "Sign Out", session_pth, method: delete %>
+      <% else %>
+        <%= link_to "Sign Up", new_user_path %>
+        <%= link_to "Sign In", new_session_path %>
+      <% end %>
     </nav>
 
 
     <%= yield %>
 
     <footer>
-      <p>(c) Adrienne Dao 2016</p>
+      <p>(c)Adrienne Dao 2016</p>
     <footer>
   </body>
 </html>
