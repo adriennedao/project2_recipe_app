@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :recipes, only: [:index, :show]
+  resources :recipes
   resources :ingredients
 
   root "recipes#index"

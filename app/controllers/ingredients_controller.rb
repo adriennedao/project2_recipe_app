@@ -6,12 +6,18 @@ class IngredientsController < ApplicationController
 end
 
 def new
-  @ingredient = Ingredient.new
+  @recipe = Recipe.find(params[:recipe_id])
+  @ingredient = @recipe.Ingredient.new
 end
 
 def create
   Ingredient.create!(ingredient_params)
   redirect_to ingredients_path
+end
+
+def edit
+  @recipe = Recipe.find(params[:recipe_id])
+  @ingredient = Ingredient.find(params[:id])
 end
 
 def show

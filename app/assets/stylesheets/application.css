@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
   h1 {
     font-size: 30px;
     font-style: helvetica;
@@ -20,6 +21,6 @@
   }
 
  img {
-   height: 175px;
-   width: 175px;
+   height: 160px;
+   width: 160px;
  }

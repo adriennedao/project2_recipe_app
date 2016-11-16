@@ -8,7 +8,7 @@ A recipe app for GA WDI project2
 
 INTRODUCTION:  
 
-   - First Full-Stack web application using rails framework-
+   - First Full-Stack web application using rails framework
 
    - The app consisted of 2 models
 
