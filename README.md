@@ -23,8 +23,6 @@ INTRODUCTION:
 
 
 
-
-
 TECHNOLOGIES USED:
 
    - Ruby 2.3.1p112
@@ -32,3 +30,12 @@ TECHNOLOGIES USED:
    - Postgresql
 
    - Rails version 5.0.0.1
+
+
+FUTURE IMPROVEMENT:
+
+   - Work on button and connect more ingredient
+
+   - Styling on CSS and make it look presentable
+
+   - Add more features

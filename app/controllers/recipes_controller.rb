@@ -13,7 +13,7 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.create!(recipe_params)
+    @recipe = Recipe.create!(recipe_params.merge(user: @current_user))
     redirect_to @recipe
 end
 

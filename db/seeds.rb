@@ -8,8 +8,8 @@
 Recipe.destroy_all
 Ingredient.destroy_all
 
-dumpling = Recipe.create(name: "Dumpling", img_url: "http://i.imgur.com/2QEyXyF.jpg")
-charcuterie = Recipe.create(name: "Charcuterie Plate", img_url: "http://i.imgur.com/N5tiQuJ.jpg")
+dumpling = Recipe.create!(name: "Dumpling", img_url: "http://i.imgur.com/2QEyXyF.jpg")
+charcuterie = Recipe.create!(name: "Charcuterie Plate", img_url: "http://i.imgur.com/N5tiQuJ.jpg")
 pokpok = Recipe.create(name: "Pokpok", img_url: "http://i.imgur.com/RYkwaTY.jpg")
 
 groundpork = Ingredient.create(name: "Groundpork", recipe_id: dumpling.id)
@@ -32,3 +32,5 @@ fishsauce = Ingredient.create(name: "Fishsauce", recipe_id: pokpok.id)
 sugar = Ingredient.create(name: "Sugar", recipe_id: pokpok.id)
 water = Ingredient.create(name: "Water", recipe_id: pokpok.id)
 salt = Ingredient.create(name: "Salt", recipe_id: pokpok.id)
+#User.create(username: "me", password:"12345")
+#Recipe.create!(name:'my recipe', user: User.last)

@@ -24,3 +24,4 @@ def destroy
   puts "You'are signed out!"
   redirect_to :root
 end
+end
