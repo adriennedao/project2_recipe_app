@@ -12,15 +12,24 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all
   end
 
+
   def create
-    @recipe = Recipe.create!(recipe_params.merge(user: @current_user))
-    redirect_to @recipe
-end
+    Recipe.create!(recipe_params)
+    redirect_to recipes_path
+  end
+
+#  def create
+#    @recipe = Recipe.create!(recipe_params.merge(user: @current_user))
+#    redirect_to @recipe
+
 
   def update
     @recipe = Recipe.find(params[:id])
-    @recipe.update(recipe_params)
+    if @recipe.update(recipe_params)
     redirect_to recipe_path(@recipe)
+  else
+    render "edit"
+    end
   end
 
 def edit

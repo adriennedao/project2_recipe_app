@@ -1,4 +1,4 @@
-<h2><%= @recipe.name %></h2>
+<h2><%= link_to "Edit", recipe_path(@recipe) %></h2>
 
 <%= link_to "Back", recipe_path, class:'button' %>
 <%= link_to "Edit", new_recipe_path(@recipe), class:'button button-primary'%>

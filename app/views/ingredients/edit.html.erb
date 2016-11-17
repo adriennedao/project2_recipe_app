@@ -1,0 +1,10 @@
+<h2><%= link_to "Edit", edit_ingredient_path(@ingredient) %></2>
+<%= form_for @ingredient do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :img_url %>
+  <%= f.label_field :img_url %>
+  <%= f.submit %>
+
+<% end %>

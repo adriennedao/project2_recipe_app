@@ -24,6 +24,12 @@ def show
   @ingredient = Ingredient.find(params[:id])
 end
 
+def destroy
+  @ingredient = Ingredient.find(params[:id])
+  @Ingredient.destroy
+  redirect_to Ingredient_path
+end
+
 private
 def ingredient_params
   params.required(:ingredient).permit(:name, :img_url, :recipe_id)

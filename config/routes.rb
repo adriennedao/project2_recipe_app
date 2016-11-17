@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  resources :recipes
-  resources :ingredients
-  resource :session
+  resources :recipes, only: [:index, :show, :new, :create, :destroy]
+  resources :ingredients 
+  resources :session
   resources :users
   root "recipes#index"
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
