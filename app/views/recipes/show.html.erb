@@ -1,7 +1,12 @@
-<h2><%= link_to "Edit", recipe_path(@recipe) %></h2>
+<%#<h2><%= link_to "Edit", recipe_path(@recipe) %>
 
 <%= link_to "Back", recipe_path, class:'button' %>
 <%= link_to "Edit", new_recipe_path(@recipe), class:'button button-primary'%>
-<%= link_to "Delete", @recipe, method: :delete, data: {confirm: "Delete Recipe?"}, class:'button'%>
+<%#= link_to "Delete", @recipe, method: :delete, data: {confirm: "Delete Recipe?"}, class:'button'%>
 
-<h2>Ingredient <%= link_to "+", ingredient_path(@recipe) %></h2>
+
+<% @recipe.ingredients.each do |ingredient| %>
+<p>
+  <%= link_to ingredient.name, ingredient %>
+</p>
+<% end %>

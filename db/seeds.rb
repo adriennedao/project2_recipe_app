@@ -12,25 +12,62 @@ dumpling = Recipe.create!(name: "Dumpling", img_url: "http://i.imgur.com/2QEyXyF
 charcuterie = Recipe.create!(name: "Charcuterie Plate", img_url: "http://i.imgur.com/N5tiQuJ.jpg")
 pokpok = Recipe.create(name: "Pokpok", img_url: "http://i.imgur.com/RYkwaTY.jpg")
 
-groundpork = Ingredient.create(name: "Groundpork", recipe_id: dumpling.id)
-dumplingwrapper = Ingredient.create(name: "Dumplingwrapper", recipe_id: dumpling.id)
-soysauce = Ingredient.create(name: "Soysauce", recipe_id: dumpling.id)
-ginger = Ingredient.create(name: "Ginger", recipe_id: dumpling.id)
-sesameoil = Ingredient.create(name: "Sesameoil", recipe_id: dumpling.id)
 
-sausicon = Ingredient.create(name: "Sausicon", recipe_id: charcuterie.id)
-cheese = Ingredient.create(name: "Cheese", recipe_id: charcuterie.id)
-olive = Ingredient.create(name: "Olive", recipe_id: charcuterie.id)
-grape = Ingredient.create(name: "Grape", recipe_id: charcuterie.id)
-apple = Ingredient.create(name: "Apple", recipe_id: charcuterie.id)
+groundpork = Ingredient.new(name: "Groundpork")
+groundpork.recipe = dumpling
+groundpork.save
+dumplingwrapper = Ingredient.new(name: "Dumplingwrapper")
+dumplingwrapper.recipe = dumpling
+dumpling.save
+soysauce = Ingredient.new(name: "Soysauce")
+soysauce.recipe = dumpling
+soysauce.save
+ginger = Ingredient.new(name: "Ginger")
+ginger.recipe = dumpling
+ginger.save
+sesameoil = Ingredient.new(name: "Sesameoil")
+sesameoil.recipe = dumpling
+sesameoil.save
 
-chickenwings = Ingredient.create(name: "Chickenwings", recipe_id: pokpok.id)
-garlic = Ingredient.create(name: "Garlic", recipe_id: pokpok.id)
-flour = Ingredient.create(name: "Flour", recipe_id: pokpok.id)
-oil = Ingredient.create(name: "Oil", recipe_id: pokpok.id)
-fishsauce = Ingredient.create(name: "Fishsauce", recipe_id: pokpok.id)
-sugar = Ingredient.create(name: "Sugar", recipe_id: pokpok.id)
-water = Ingredient.create(name: "Water", recipe_id: pokpok.id)
-salt = Ingredient.create(name: "Salt", recipe_id: pokpok.id)
+sausicon = Ingredient.new(name: "Sausicon")
+sausicon.recipe = charcuterie
+sausicon.save
+cheese = Ingredient.new(name: "Cheese")
+cheese.recipe = charcuterie
+cheese.save
+olive = Ingredient.new(name: "Olive")
+olive.recipe = charcuterie
+olive.save
+grape = Ingredient.new(name: "Grape")
+grape.recipe = charcuterie
+grape.save
+apple = Ingredient.new(name: "Apple")
+apple.recipe = charcuterie
+apple.save
+
+chickenwings = Ingredient.new(name: "Chickenwigs")
+chickenwings.recipe = pokpok
+chickenwings.save
+garlic = Ingredient.new(name: "Garlic")
+garlic.recipe = pokpok
+garlic.save
+flour = Ingredient.new(name: "Flour")
+flour.recipe = pokpok
+flour.save
+oil = Ingredient.new(name: "Oil")
+oil.recipe = pokpok
+oil.save
+fishsauce = Ingredient.new(name: "Fishsauce")
+fishsauce.recipe = pokpok
+fishsauce.save
+sugar = Ingredient.new(name: "Sugar")
+sugar.recipe = pokpok
+sugar.save
+water = Ingredient.new(name: "Water")
+water.recipe = pokpok
+water.save
+salt = Ingredient.new(name: "Salt")
+salt.recipe = pokpok
+salt.save
 #User.create(username: "me", password:"12345")
 #Recipe.create!(name:'my recipe', user: User.last)
