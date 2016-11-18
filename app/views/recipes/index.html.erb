@@ -8,9 +8,9 @@
     <h2><a href="<%= recipe_path(recipe)%>"><%=recipe.name%></a></h2>
     <img src="<%= recipe.img_url %>">
     <p><%= link_to recipe.name, recipe %></p>
-    <p><%= link_to 'Delete Recipe', recipe_path(recipe),
+    <%#<p><%= link_to 'Delete Recipe', recipe_path(recipe),
             method: :delete,
-            data: { confirm: 'Are you sure?' } %></p>
+            data: { confirm: 'Are you sure?' } %>
 
   </div>
 
