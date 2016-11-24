@@ -1,6 +1,7 @@
-<h1>Homecooked Recipes</h1>
+<h1>Listing Recipes</h1>
 
-<h2>New Recipes <%=link_to "(+)", new_recipe_path%></h2>
+<!--<h2>New Recipe <%=link_to "(+)", new_recipe_path%></h2>-->
+
 
 <% @recipes.each do |recipe| %>
 
@@ -13,5 +14,6 @@
             data: { confirm: 'Are you sure?' } %>
 
   </div>
+<%= link_to 'New Recipe', new_recipe_path, class: 'btn btn-primary'%>
 
 <% end %>
