@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
       puts "You'are signed in!"
       sessions[:user_id] = @user
       redirect_to root_path
+# the indentation here makes it really confusing where this if condition and method executes and ends. Proper indentation will help with the clarity
 end
   else
     puts "That user doesn't exist!"

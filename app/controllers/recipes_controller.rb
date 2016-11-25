@@ -18,6 +18,7 @@ class RecipesController < ApplicationController
     redirect_to recipes_path
   end
 
+# get rid of this extra create method
 #  def create
 #    @recipe = Recipe.create!(recipe_params.merge(user: @current_user))
 #    redirect_to @recipe
