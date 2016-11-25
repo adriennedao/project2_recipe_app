@@ -3,6 +3,7 @@ class IngredientsController < ApplicationController
   def index
     @ingredients = Ingredient.all
     @recipes = Recipe.all
+    # indentation
 end
 
 def new
