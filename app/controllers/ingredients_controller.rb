@@ -1,39 +1,50 @@
 class IngredientsController < ApplicationController
 
+
   def index
     @ingredients = Ingredient.all
     @recipes = Recipe.all
 end
 
-def new
-  @recipe = Recipe.find(params[:recipe_id])
-  @ingredient = @recipe.Ingredient.new
-end
-
 def show
+  @recipe = Recipe.find(params[:recipe_id])
   @ingredient = Ingredient.find(params[:id])
 end
 
-def create
-  Ingredient.create!(ingredient_params)
-  redirect_to ingredients_path
+def new
+  @recipe = Recipe.find(params[:recipe_id])
+  @ingredient = @recipe.ingredients.build
 end
 
+def create
+    @recipe = Recipe.find(params[:recipe_id])
+    @ingredient =@recipe.ingredients.create(ingredient_params)
+    redirect_to @recipe
+end
+
+
+
+#def new
+# @recipe = Recipe.find(params[:recipe_id])
+#  @ingredient = @recipe.Ingredient.new
+#end
+
 def edit
-  @recipe = Recipe.find(params[:recipe_id])
+  #@recipe = Recipe.find(params[:recipe_id])
   @ingredient = Ingredient.find(params[:id])
 end
 
 
 def destroy
+  @recipe = Recipe.find(params[:recipe_id])
   @ingredient = Ingredient.find(params[:id])
-  @Ingredient.destroy
-  redirect_to Ingredient_path
+  @ingredient.destroy
+  redirect_to @recipe
 end
 
 private
-def ingredient_params
-  params.required(:ingredient).permit(:name, :img_url, :recipe_id)
-  end
 
+def ingredient_params
+  params.required(:ingredient).permit(:name, :img_url)
+  end
 end

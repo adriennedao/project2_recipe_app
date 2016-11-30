@@ -1,6 +1,9 @@
+<h1><strong>Ingredients</strong></h1>
 
-<h2><%= link_to "Edit", ingredient_path(@ingredient) %></h2>
+<td><%= link_to "Back", root_path, class:'btn btn-info' %></td>
+<td><%= link_to "Edit", new_recipe_ingredient_path(@ingredient), class:'btn btn-warning'%></td>
+<td><%= link_to "Delete Ingredient", recipe_ingredient_path(@recipe, @ingredient), method: :delete, data: {confirm: "Delete Ingredient?"}, class:'btn btn-danger'%></td>
 
-<%= link_to "Back", ingredient_path, class:'button' %>
-<%= link_to "Edit", new_ingredient_path(@recipe), class:'button button-primary'%>
-<%= link_to "Delete", @ingredient, method: :delete, data: {confirm: "Delete Ingredient?"}, class:'button'%>
+<%#<% @recipe.ingredients.each do |ingredient| %>
+<%#<%= link_to ingredient.name, ingredient %>
+<%#<% end %>

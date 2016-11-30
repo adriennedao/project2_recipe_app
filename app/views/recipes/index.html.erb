@@ -1,19 +1,12 @@
 <h1>Listing Recipes</h1>
-
-<!--<h2>New Recipe <%=link_to "(+)", new_recipe_path%></h2>-->
-
-
+<%= link_to 'New Recipe', new_recipe_path, class: 'btn btn-primary'%>
 <% @recipes.each do |recipe| %>
 
   <div>
-    <h2><a href="<%= recipe_path(recipe)%>"><%=recipe.name%></a></h2>
-    <img src="<%= recipe.img_url %>">
-    <p><%= link_to recipe.name, recipe %></p>
-    <%#<p><%= link_to 'Delete Recipe', recipe_path(recipe),
-            method: :delete,
-            data: { confirm: 'Are you sure?' } %>
+      <h2><a href="<%= recipe_path(recipe)%>"><%=recipe.name%></a></h2>
+      <img src="<%= recipe.img_url %>">
+      <p><%= link_to recipe.name, recipe %></p>
+    </div>
 
-  </div>
-<%= link_to 'New Recipe', new_recipe_path, class: 'btn btn-primary'%>
 
 <% end %>

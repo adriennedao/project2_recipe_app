@@ -1,9 +1,4 @@
-<%= form_for @recipe do |f| %>
+<h1>New Recipe</h1>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
-  <%= f.label :img_url %>
-  <%= f.text_field :img_url %>
-    <%= f.submit %>
-  <% end %>
+<%= render 'form' %>
+<%= link_to 'Back', recipes_path %>
