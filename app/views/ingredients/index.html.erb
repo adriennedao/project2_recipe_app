@@ -2,7 +2,7 @@
 <% @ingredients.each do |ingredient| %>
   <div>
     <h2><a href="<%= ingredient_path(ingredient)%>"><%=ingredient.name%></a></h2>
-    <%#<img src="<%= ingredient.img_url%>
+
     <p><%= link_to ingredient.name, ingredient %></p>
   </div>
 <% end %>

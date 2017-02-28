@@ -22,13 +22,6 @@ def create
     redirect_to @recipe
 end
 
-
-
-#def new
-# @recipe = Recipe.find(params[:recipe_id])
-#  @ingredient = @recipe.Ingredient.new
-#end
-
 def edit
   #@recipe = Recipe.find(params[:recipe_id])
   @ingredient = Ingredient.find(params[:id])
