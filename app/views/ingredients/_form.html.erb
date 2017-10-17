@@ -1,16 +1,16 @@
 <%= form_for [@recipe, @ingredient] do |f| %>
 
- <div class="field form-group">
-  <%= f.label :name %>
-  <%= f.text_field :name, class: 'form-control' %>
+<div class="field form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
 </div>
 
 <div class="field form-group">
-  <%= f.label :img_url %><br>
-  <%= f.text_area :img_url, class: 'form-control' %>
+    <%= f.label :img_url %><br>
+    <%= f.text_area :img_url, class: 'form-control' %>
 </div>
 
 <div class="actions form-group">
-  <%= f.submit %>
+    <%= f.submit %>
 </div>
 <% end %>

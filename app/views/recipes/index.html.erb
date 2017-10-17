@@ -1,4 +1,5 @@
-<h1>Listing Homemade Recipes</h1> 
+<h1>Listing of Homemade Recipes</h1>
+<hr>
 <%= link_to 'New Recipe', new_recipe_path, class: 'btn btn-primary'%>
 <% @recipes.each do |recipe| %>
 
@@ -6,7 +7,9 @@
       <h2><a href="<%= recipe_path(recipe)%>"><%=recipe.name%></a></h2>
       <img src="<%= recipe.img_url %>">
       <p><%= link_to recipe.name, recipe %></p>
-    </div>
+
+     <hr>
+  </div>
 
 
 <% end %>

@@ -1,7 +1,7 @@
 class IngredientsController < ApplicationController
 
 
-  def index
+def index
     @ingredients = Ingredient.all
     @recipes = Recipe.all
 end
@@ -25,8 +25,14 @@ end
 def edit
   #@recipe = Recipe.find(params[:recipe_id])
   @ingredient = Ingredient.find(params[:id])
+  redirect_to @ingredient
 end
 
+def update
+  @ingredient = Ingredient.find(params[:id])
+  @ingredient.update(ingredient_params)
+  redirect_to ingredient_path(@ingredient)
+end
 
 def destroy
   @recipe = Recipe.find(params[:recipe_id])
