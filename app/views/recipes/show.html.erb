@@ -1,12 +1,11 @@
 <h2>Ingredients</h2>
-
+<hr>
 <div>
   <td><%= link_to "Back", root_path, class:'btn btn-info' %></td>
   <td><%= link_to "Edit", new_recipe_path(@recipe), class:'btn btn-warning'%></td>
   <td><%= link_to "Delete", @recipe, method: :delete, data: {confirm: "Delete Recipe?"}, class:'btn btn-danger'%></td>
   <%= link_to 'New Ingredient', new_recipe_ingredient_path(@recipe), class: 'btn btn-primary'%>
 </div>
-
 <% @recipe.ingredients.each do |ingredient| %>
 <%= link_to "#{ingredient.name}", recipe_ingredient_path(@recipe, ingredient) %>
 

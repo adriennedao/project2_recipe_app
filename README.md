@@ -5,7 +5,6 @@ A recipe app for GA WDI project2
 
 
 
-
 INTRODUCTION:  
 
    - First Full-Stack web application using rails framework
@@ -22,7 +21,6 @@ INTRODUCTION:
 
 
 
-
 TECHNOLOGIES USED:
 
    - Ruby 2.3.1p112
@@ -34,8 +32,6 @@ TECHNOLOGIES USED:
 
 FUTURE IMPROVEMENT:
 
-   - Work on button and connect more ingredient
+   - Styling and CSS
 
-   - Styling on CSS and make it look presentable
-
-   - Add more features
+   - Additional features
