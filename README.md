@@ -17,9 +17,6 @@ INTRODUCTION:
 
    - Include Error Handling & Validations for both models
 
-   - User Authenthication
-
-
 
 TECHNOLOGIES USED:
 
@@ -35,3 +32,5 @@ FUTURE IMPROVEMENT:
    - Styling and CSS
 
    - Additional features
+
+   - User Authenthication
