@@ -1,6 +1,6 @@
 <h1>Homemade Recipes</h1>
 <hr>
-<%= link_to 'New Recipe', new_recipe_path, class: 'btn btn-primary'%>
+<%= link_to 'Create New Recipe', new_recipe_path, class: 'btn btn-primary'%>
 <% @recipes.each do |recipe| %>
 
   <div>
@@ -10,6 +10,5 @@
 
      <hr>
   </div>
-
 
 <% end %>
