@@ -23,15 +23,15 @@ def create
 end
 
 def edit
-  #@recipe = Recipe.find(params[:recipe_id])
   @ingredient = Ingredient.find(params[:id])
-  redirect_to @ingredient
 end
 
 def update
   @ingredient = Ingredient.find(params[:id])
-  @ingredient.update(ingredient_params)
-  redirect_to ingredient_path(@ingredient)
+  if @ingredient.update_recipes(ingredient_params)
+else
+  render 'edit'
+  end
 end
 
 def destroy
